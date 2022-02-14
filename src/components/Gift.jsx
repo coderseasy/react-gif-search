@@ -29,11 +29,15 @@ const Gift=(props) =>{
         setImages(gifs)
         
     } //se paso a un helper*/
-
+    const ff=()=>{
+        setTimeout(() => {
+            return true;
+        }, 300);
+    }
     
     return (
         <>
-            {loading?<p className="w-100 ml-4 h2 text-danger font-weight-bold">cargando....</p>:<div className="row w-100 ml-4 h2 text-primary font-weight-bold"><p className="">{props.category}</p></div>}
+            {loading?<p className="w-100 ml-4 h2 text-danger font-weight-bold animate__animated animate__bounce animate__infinite animate_faster">cargando....</p>:<div className="row w-100 ml-4 h2 text-primary font-weight-bold animate__animated animate__rollIn"><p className="">{props.category}</p></div>}
             {
                 images.map(img => {
                     return (
